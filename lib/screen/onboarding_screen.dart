@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screen/home_screen.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -57,6 +58,40 @@ class OnboardingScreen extends StatelessWidget {
             width: 200,
           ),
           decoration: pageDecoration,
+          footer: Padding(
+            padding: const EdgeInsets.only(
+              left: 15,
+              right: 15,
+              top: 50,
+            ),
+            child: ElevatedButton(
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const HomeScreen(),
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size.fromHeight(
+                  55,
+                ),
+                backgroundColor: const Color(
+                  0xFFEF6969,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(
+                    8,
+                  ),
+                ),
+              ),
+              child: const Text(
+                'Lets Shop',
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+            ),
+          ),
         ),
       ],
       showSkipButton: false,
