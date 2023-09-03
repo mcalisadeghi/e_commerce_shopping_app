@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screen/onboarding_screen.dart';
 import 'package:flutter_application_1/screen/splash_screen.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
           0xFFEF6969,
         ),
       ),
-      home: const SplashScreen(),
+      home: OnboardingScreen(), //SplashScreen(),
     );
   }
 }

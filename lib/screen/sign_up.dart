@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/screen/forget_screen.dart';
 import 'package:flutter_application_1/screen/home_screen.dart';
-import 'package:flutter_application_1/screen/sign_up.dart';
+import 'package:flutter_application_1/screen/loging_screen.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +13,14 @@ class LoginPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const SizedBox(
+                height: 50,
+              ),
               Image.asset(
                 'assets/images/freed.png',
+              ),
+              const SizedBox(
+                height: 30,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
@@ -23,15 +28,36 @@ class LoginPage extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
+                    TextFormField(
+                      decoration: const InputDecoration(
+                        labelText: 'Name',
+                        border: OutlineInputBorder(),
+                        prefixIcon: Icon(
+                          Icons.percent,
+                        ),
+                      ),
+                    ),
                     const SizedBox(
-                      height: 110,
+                      height: 15,
                     ),
                     TextFormField(
                       decoration: const InputDecoration(
                         labelText: 'Email',
                         border: OutlineInputBorder(),
                         prefixIcon: Icon(
-                          Icons.percent,
+                          Icons.email,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    TextFormField(
+                      decoration: const InputDecoration(
+                        labelText: 'Number',
+                        border: OutlineInputBorder(),
+                        prefixIcon: Icon(
+                          Icons.numbers,
                         ),
                       ),
                     ),
@@ -51,26 +77,19 @@ class LoginPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Align(
-                      alignment: Alignment.bottomRight,
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ForgetScreen(),
-                            ),
-                          );
-                        },
-                        child: const Text(
-                          'Forget Password',
-                          style: TextStyle(
-                            color: Color(
-                              0xFFEF6969,
-                            ),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    TextFormField(
+                      obscureText: true,
+                      decoration: const InputDecoration(
+                        labelText: 'comfirm Passwd',
+                        border: OutlineInputBorder(),
+                        prefixIcon: Icon(
+                          Icons.lock,
+                        ),
+                        suffixIcon: Icon(
+                          Icons.remove_red_eye,
                         ),
                       ),
                     ),
@@ -98,7 +117,7 @@ class LoginPage extends StatelessWidget {
                         ),
                       ),
                       child: const Text(
-                        'Log In',
+                        'Create accout',
                         style: TextStyle(
                           fontSize: 18,
                         ),
@@ -111,7 +130,7 @@ class LoginPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const Text(
-                          'Dont Have an Account?',
+                          'Alredy have an Account?',
                           style: TextStyle(
                             color: Colors.black54,
                             fontSize: 15,
@@ -122,12 +141,12 @@ class LoginPage extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const SignUpScreen(),
+                                builder: (context) => const LoginPage(),
                               ),
                             );
                           },
                           child: const Text(
-                            'Sing Up',
+                            'Log In',
                             style: TextStyle(
                               color: Color(
                                 0xFFEF6969,
