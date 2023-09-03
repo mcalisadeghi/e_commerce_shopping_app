@@ -1,8 +1,16 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ForgetScreen extends StatelessWidget {
+class ForgetScreen extends StatefulWidget {
   const ForgetScreen({super.key});
 
+  @override
+  State<ForgetScreen> createState() => _ForgetScreenState();
+}
+
+class _ForgetScreenState extends State<ForgetScreen> {
+  bool clearbtn = false;
+  TextEditingController emailController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,17 +38,47 @@ class ForgetScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 60,
               ),
               Text(
                 'reset  password link is sent to your email.',
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 15,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 20,
+              ),
+              TextFormField(
+                controller: emailController,
+                onChanged: (index) {
+                  if (index != "") {
+                    setState(
+                      () {
+                        clearbtn = true;
+                      },
+                    );
+                  }
+                },
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'email',
+                    suffix: InkWell(
+                      onTap: () {
+                        setState(
+                          () {
+                            emailController.text = '';
+                          },
+                        );
+                      },
+                      child: Icon(
+                        CupertinoIcons.multiply,
+                        color: Color(
+                          0xFFDB3022,
+                        ),
+                      ),
+                    )),
               ),
             ],
           ),
