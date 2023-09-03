@@ -68,7 +68,7 @@ class _ForgetScreenState extends State<ForgetScreen> {
                       onTap: () {
                         setState(
                           () {
-                            emailController.text = '';
+                            emailController.clear();
                           },
                         );
                       },
