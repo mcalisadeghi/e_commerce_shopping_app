@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screen/reccovery_screen.dart';
 
 class ForgetScreen extends StatefulWidget {
   const ForgetScreen({super.key});
@@ -62,23 +63,54 @@ class _ForgetScreenState extends State<ForgetScreen> {
                   }
                 },
                 decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'email',
-                    suffix: InkWell(
-                      onTap: () {
-                        setState(
-                          () {
-                            emailController.clear();
-                          },
-                        );
-                      },
-                      child: Icon(
-                        CupertinoIcons.multiply,
-                        color: Color(
-                          0xFFDB3022,
-                        ),
+                  border: OutlineInputBorder(),
+                  labelText: 'email',
+                  suffix: InkWell(
+                    onTap: () {
+                      setState(
+                        () {
+                          emailController.clear();
+                        },
+                      );
+                    },
+                    child: Icon(
+                      CupertinoIcons.multiply,
+                      color: Color(
+                        0xFFDB3022,
                       ),
-                    )),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              ElevatedButton(
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const RecoveryScreen(),
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size.fromHeight(
+                    55,
+                  ),
+                  backgroundColor: const Color(
+                    0xFFEF6969,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(
+                      8,
+                    ),
+                  ),
+                ),
+                child: const Text(
+                  'Send Code',
+                  style: TextStyle(
+                    fontSize: 18,
+                  ),
+                ),
               ),
             ],
           ),
