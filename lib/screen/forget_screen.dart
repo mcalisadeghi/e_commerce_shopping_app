@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screen/otp_screen.dart';
 import 'package:flutter_application_1/screen/reccovery_screen.dart';
 
 class ForgetScreen extends StatefulWidget {
@@ -117,6 +118,9 @@ class _ForgetScreenState extends State<ForgetScreen> {
               ),
               Column(
                 children: [
+                  SizedBox(
+                    height: 20,
+                  ),
                   Text(
                     'OR',
                   ),
@@ -125,7 +129,7 @@ class _ForgetScreenState extends State<ForgetScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const SignUpScreen(),
+                          builder: (context) => const OTPScreen(),
                         ),
                       );
                     },
