@@ -42,6 +42,9 @@ class _RecoveryScreenState extends State<RecoveryScreen> {
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Reset code.',
+                  prefix: Icon(
+                    Icons.numbers,
+                  ),
                 ),
               ),
               TextFormField(
@@ -88,7 +91,7 @@ class _RecoveryScreenState extends State<RecoveryScreen> {
                   ),
                 ),
                 child: const Text(
-                  'Send Code',
+                  'Resset password',
                   style: TextStyle(
                     fontSize: 18,
                   ),

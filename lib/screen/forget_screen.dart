@@ -26,16 +26,19 @@ class _ForgetScreenState extends State<ForgetScreen> {
             horizontal: 15,
           ),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
                 height: 10,
               ),
-              Text(
-                'Forget Password',
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
+              Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Forget Password',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               SizedBox(
@@ -112,6 +115,33 @@ class _ForgetScreenState extends State<ForgetScreen> {
                   ),
                 ),
               ),
+              Column(
+                children: [
+                  Text(
+                    'OR',
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SignUpScreen(),
+                        ),
+                      );
+                    },
+                    child: const Text(
+                      'veryfy usin number',
+                      style: TextStyle(
+                        color: Color(
+                          0xFFEF6969,
+                        ),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
         ),
