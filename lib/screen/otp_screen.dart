@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screen/otp_verify_screen.dart';
 
 class OTPScreen extends StatelessWidget {
   const OTPScreen({super.key});
@@ -13,15 +14,15 @@ class OTPScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             horizontal: 15,
           ),
           child: Column(
-            children: [
-              SizedBox(
+            children: <Widget>[
+              const SizedBox(
                 height: 10,
               ),
-              Align(
+              const Align(
                 alignment: Alignment.topLeft,
                 child: Text(
                   'forget pasword',
@@ -31,32 +32,32 @@ class OTPScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 60,
               ),
-              Text(
+              const Text(
                 'plwase enter your number. you will recevie a otp to create or set a new password via number',
                 style: TextStyle(
                   fontSize: 15,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 60,
               ),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Enter number',
                   border: OutlineInputBorder(),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               ElevatedButton(
                 onPressed: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const RecoveryScreen(),
+                    builder: (context) => const OTPVerifyScreen(),
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
