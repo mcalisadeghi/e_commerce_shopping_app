@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:sms_otp_auto_verify/sms_otp_auto_verify.dart';
 
-class OTPVerifyScreen extends StatelessWidget {
+class OTPVerifyScreen extends StatefulWidget {
   const OTPVerifyScreen({super.key});
+
+  @override
+  State<OTPVerifyScreen> createState() => _OTPVerifyScreenState();
+}
+
+class _OTPVerifyScreenState extends State<OTPVerifyScreen> {
+  BoxDecoration get _pinPutDecoration {
+    return BoxDecoration(
+      border: Border.all(color: Theme.of(context).primaryColor),
+      borderRadius: BorderRadius.circular(15.0),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +44,24 @@ class OTPVerifyScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              TextFieldPin(
+                  textController: textEditingController,
+                  autoFocus: false,
+                  codeLength: 4,
+                  alignment: MainAxisAlignment.center,
+                  defaultBoxSize: 55.0,
+                  margin: 10,
+                  selectedBoxSize: 46.0,
+                  textStyle: TextStyle(fontSize: 16),
+                  defaultDecoration: _pinPutDecoration.copyWith(
+                    border: Border.all(
+                      color: Colors.grey,
+                    ),
+                  ),
+                  selectedDecoration: _pinPutDecoration,
+                  onChange: (code) {
+                    _onOtpCallBack(code, false);
+                  }),
             ],
           ),
         ),
