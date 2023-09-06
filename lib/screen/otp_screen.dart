@@ -14,7 +14,7 @@ class OTPScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: 25,
+            horizontal: 15,
           ),
           child: Column(
             children: [
@@ -32,7 +32,52 @@ class OTPScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 50,
+                height: 60,
+              ),
+              Text(
+                'plwase enter your number. you will recevie a otp to create or set a new password via number',
+                style: TextStyle(
+                  fontSize: 15,
+                ),
+              ),
+              SizedBox(
+                height: 60,
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: 'Enter number',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              ElevatedButton(
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const RecoveryScreen(),
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size.fromHeight(
+                    55,
+                  ),
+                  backgroundColor: const Color(
+                    0xFFEF6969,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(
+                      8,
+                    ),
+                  ),
+                ),
+                child: const Text(
+                  'Send Code',
+                  style: TextStyle(
+                    fontSize: 18,
+                  ),
+                ),
               ),
             ],
           ),
