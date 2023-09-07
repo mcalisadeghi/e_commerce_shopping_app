@@ -23,16 +23,16 @@ class _ForgetScreenState extends State<ForgetScreen> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             horizontal: 15,
           ),
           child: Column(
             // crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
+            children: <Widget>[
+              const SizedBox(
                 height: 10,
               ),
-              Align(
+              const Align(
                 alignment: Alignment.topLeft,
                 child: Text(
                   'Forget Password',
@@ -42,17 +42,17 @@ class _ForgetScreenState extends State<ForgetScreen> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 60,
               ),
-              Text(
+              const Text(
                 'reset  password link is sent to your email.',
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               TextFormField(
@@ -67,7 +67,7 @@ class _ForgetScreenState extends State<ForgetScreen> {
                   }
                 },
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
                   labelText: 'email',
                   suffix: InkWell(
                     onTap: () {
@@ -77,7 +77,7 @@ class _ForgetScreenState extends State<ForgetScreen> {
                         },
                       );
                     },
-                    child: Icon(
+                    child: const Icon(
                       CupertinoIcons.multiply,
                       color: Color(
                         0xFFDB3022,
@@ -117,11 +117,11 @@ class _ForgetScreenState extends State<ForgetScreen> {
                 ),
               ),
               Column(
-                children: [
-                  SizedBox(
+                children: <Widget>[
+                  const SizedBox(
                     height: 20,
                   ),
-                  Text(
+                  const Text(
                     'OR',
                   ),
                   TextButton(

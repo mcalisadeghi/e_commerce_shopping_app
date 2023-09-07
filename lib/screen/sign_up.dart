@@ -12,7 +12,7 @@ class SignUpScreen extends StatelessWidget {
         child: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: <Widget>[
               const SizedBox(
                 height: 50,
               ),
@@ -100,7 +100,7 @@ class SignUpScreen extends StatelessWidget {
                       onPressed: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomeScreen(),
+                          builder: (context) => HomeScreen(),
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
@@ -128,7 +128,7 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                      children: <Widget>[
                         const Text(
                           'Alredy have an Account?',
                           style: TextStyle(

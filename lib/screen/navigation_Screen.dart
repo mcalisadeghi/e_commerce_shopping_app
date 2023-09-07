@@ -15,11 +15,11 @@ class NavigationScreen extends StatefulWidget {
 
 class _NavigationScreenState extends State<NavigationScreen> {
   int pageIndex = 0;
-  List<Widget> pages = const [
+  List<Widget> pages = <Widget>[
     HomeScreen(),
-    CartScreen(),
-    FavoritesScreen(),
-    ProfileScreen(),
+    const CartScreen(),
+    const FavoritesScreen(),
+    const ProfileScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -31,18 +31,18 @@ class _NavigationScreenState extends State<NavigationScreen> {
       floatingActionButton: SafeArea(
         child: FloatingActionButton(
           onPressed: () {},
-          child: Icon(
+          backgroundColor: const Color(
+            0xFFDB3022,
+          ),
+          child: const Icon(
             Icons.qr_code,
             size: 20,
-          ),
-          backgroundColor: Color(
-            0xFFDB3022,
           ),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: AnimatedBottomNavigationBar(
-        icons: const [
+        icons: const <IconData>[
           CupertinoIcons.home,
           CupertinoIcons.cart,
           CupertinoIcons.heart,

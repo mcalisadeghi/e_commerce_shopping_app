@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screen/home_screen.dart';
 
 class RecoveryScreen extends StatefulWidget {
   const RecoveryScreen({super.key});
@@ -19,27 +20,27 @@ class _RecoveryScreenState extends State<RecoveryScreen> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             horizontal: 15,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
+            children: <Widget>[
+              const SizedBox(
                 height: 10,
               ),
-              Text(
+              const Text(
                 'Forget Password',
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 60,
               ),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Reset code.',
                   prefix: Icon(
@@ -48,7 +49,7 @@ class _RecoveryScreenState extends State<RecoveryScreen> {
                 ),
               ),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'New Password.',
                   prefix: Icon(
@@ -57,7 +58,7 @@ class _RecoveryScreenState extends State<RecoveryScreen> {
                 ),
               ),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Confirm Password.',
                     prefix: Icon(
@@ -74,7 +75,7 @@ class _RecoveryScreenState extends State<RecoveryScreen> {
                 onPressed: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const HomeScreen(),
+                    builder: (context) => HomeScreen(),
                   ),
                 ),
                 style: ElevatedButton.styleFrom(

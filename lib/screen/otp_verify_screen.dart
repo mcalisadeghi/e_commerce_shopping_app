@@ -30,16 +30,16 @@ class _OTPVerifyScreenState extends State<OTPVerifyScreen> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             horizontal: 15,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
+            children: <Widget>[
+              const SizedBox(
                 height: 10,
               ),
-              Align(
+              const Align(
                 alignment: Alignment.topLeft,
                 child: Text(
                   'enter otp',
@@ -49,16 +49,16 @@ class _OTPVerifyScreenState extends State<OTPVerifyScreen> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 150,
               ),
-              Text(
+              const Text(
                 'ٍEnter the OTP code we hace setn to your numbe.',
                 style: TextStyle(
                   fontSize: 15,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               TextFieldPin(
@@ -84,7 +84,7 @@ class _OTPVerifyScreenState extends State<OTPVerifyScreen> {
                   );
                 },
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               ElevatedButton(

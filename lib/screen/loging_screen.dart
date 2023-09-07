@@ -13,7 +13,7 @@ class LoginPage extends StatelessWidget {
         child: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: <Widget>[
               Image.asset(
                 'assets/images/freed.png',
               ),
@@ -22,7 +22,7 @@ class LoginPage extends StatelessWidget {
                   horizontal: 25,
                 ),
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const SizedBox(
                       height: 110,
                     ),
@@ -58,7 +58,7 @@ class LoginPage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => ForgetScreen(),
+                              builder: (context) => const ForgetScreen(),
                             ),
                           );
                         },
@@ -81,7 +81,7 @@ class LoginPage extends StatelessWidget {
                       onPressed: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomeScreen(),
+                          builder: (BuildContext context) => HomeScreen(),
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
@@ -109,7 +109,7 @@ class LoginPage extends StatelessWidget {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                      children: <Widget>[
                         const Text(
                           'Dont Have an Account?',
                           style: TextStyle(

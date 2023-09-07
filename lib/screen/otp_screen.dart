@@ -57,7 +57,7 @@ class OTPScreen extends StatelessWidget {
                 onPressed: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const OTPVerifyScreen(),
+                    builder: (BuildContext context) => const OTPVerifyScreen(),
                   ),
                 ),
                 style: ElevatedButton.styleFrom(

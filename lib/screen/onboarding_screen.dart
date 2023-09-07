@@ -68,7 +68,7 @@ class OnboardingScreen extends StatelessWidget {
               onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const HomeScreen(),
+                  builder: (BuildContext context) => HomeScreen(),
                 ),
               ),
               style: ElevatedButton.styleFrom(

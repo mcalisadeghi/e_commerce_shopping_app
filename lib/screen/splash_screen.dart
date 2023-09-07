@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 // import 'package:flutter_application_1/screen/home_screen.dart';
 import 'package:flutter_application_1/screen/onboarding_screen.dart';
@@ -46,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
         child: const Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: <Widget>[
             Icon(
               Icons.shopping_cart,
               size: 150,
