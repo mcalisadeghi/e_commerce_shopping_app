@@ -8,6 +8,30 @@ class HomeScreen extends StatelessWidget {
     'top',
     'recommended',
   ];
+  List<String> imageList = <String>[
+    'assets/images/image1.png',
+    'assets/images/image2.png',
+    'assets/images/image3.png',
+    'assets/images/image4.png',
+  ];
+  List productTitles = [
+    'warm zipper',
+    'kintted woo',
+    'zipper win',
+    'child win',
+  ];
+  List prices = [
+    '\$300',
+    '\$650',
+    '\$50',
+    '\$100',
+  ];
+  List reviews = [
+    '54',
+    '120',
+    '542',
+    '547',
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -109,7 +133,72 @@ class HomeScreen extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     itemCount: tabs.length,
                     itemBuilder: (BuildContext context, int index) {
-                      return const FittedBox();
+                      return FittedBox(
+                        child: Text(
+                          tabs[index],
+                          style: const TextStyle(
+                            color: Colors.black38,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                Container(
+                  color: Colors.red,
+                  height: 200,
+                  child: ListView.builder(
+                    itemCount: imageList.length,
+                    scrollDirection: Axis.horizontal,
+                    shrinkWrap: true,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Container(
+                        color: Colors.red,
+                        height: 200,
+                        child: ListView.builder(
+                          itemCount: imageList.length,
+                          scrollDirection: Axis.horizontal,
+                          shrinkWrap: true,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Container(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  SizedBox(
+                                    height: 200,
+                                    child: Stack(
+                                      children: [
+                                        InkWell(
+                                          onTap: () {},
+                                          child: ClipRRect(
+                                            borderRadius: BorderRadius.circular(
+                                              20,
+                                            ),
+                                            child: Image.asset(
+                                              imageList[index],
+                                            ),
+                                          ),
+                                        ),
+                                        Positioned(
+                                          right: 10,
+                                          top: 10,
+                                          child: Container(),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
+                        ),
+                      );
                     },
                   ),
                 ),
