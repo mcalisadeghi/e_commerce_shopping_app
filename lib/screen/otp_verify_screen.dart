@@ -52,13 +52,10 @@ class _OTPVerifyScreenState extends State<OTPVerifyScreen> {
               SizedBox(
                 height: 150,
               ),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  'ٍEnter the code we hace setn to your numbe.',
-                  style: TextStyle(
-                    fontSize: 100,
-                  ),
+              Text(
+                'ٍEnter the OTP code we hace setn to your numbe.',
+                style: TextStyle(
+                  fontSize: 15,
                 ),
               ),
               SizedBox(
@@ -72,7 +69,9 @@ class _OTPVerifyScreenState extends State<OTPVerifyScreen> {
                 defaultBoxSize: 55.0,
                 margin: 10,
                 selectedBoxSize: 46.0,
-                textStyle: TextStyle(fontSize: 16),
+                textStyle: const TextStyle(
+                  fontSize: 16,
+                ),
                 defaultDecoration: _pinPutDecoration.copyWith(
                   border: Border.all(
                     color: Colors.grey,
@@ -84,6 +83,9 @@ class _OTPVerifyScreenState extends State<OTPVerifyScreen> {
                     () {},
                   );
                 },
+              ),
+              SizedBox(
+                height: 30,
               ),
               ElevatedButton(
                 onPressed: () => Navigator.push(

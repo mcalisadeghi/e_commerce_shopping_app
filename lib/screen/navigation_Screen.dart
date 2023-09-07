@@ -28,6 +28,19 @@ class _NavigationScreenState extends State<NavigationScreen> {
         index: pageIndex,
         children: pages,
       ),
+      floatingActionButton: SafeArea(
+        child: FloatingActionButton(
+          onPressed: () {},
+          child: Icon(
+            Icons.qr_code,
+            size: 20,
+          ),
+          backgroundColor: Color(
+            0xFFDB3022,
+          ),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: AnimatedBottomNavigationBar(
         icons: const [
           CupertinoIcons.home,
