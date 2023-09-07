@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screen/reccovery_screen.dart';
 import 'package:sms_otp_auto_verify/sms_otp_auto_verify.dart';
 
 class OTPVerifyScreen extends StatefulWidget {
@@ -48,17 +49,20 @@ class _OTPVerifyScreenState extends State<OTPVerifyScreen> {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 150,
+              ),
               Align(
                 alignment: Alignment.topLeft,
                 child: Text(
                   'ٍEnter the code we hace setn to your numbe.',
                   style: TextStyle(
-                    fontSize: 15,
+                    fontSize: 100,
                   ),
                 ),
               ),
               SizedBox(
-                height: 30,
+                height: 50,
               ),
               TextFieldPin(
                 textController: textEditingController,
@@ -102,7 +106,7 @@ class _OTPVerifyScreenState extends State<OTPVerifyScreen> {
                   ),
                 ),
                 child: const Text(
-                  'Send Code',
+                  'Verify',
                   style: TextStyle(
                     fontSize: 18,
                   ),
