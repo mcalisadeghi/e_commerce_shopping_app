@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
+  HomeScreen({super.key});
+  List<String> tabs = [
+    'all',
+    'Category',
+    'top',
+    'recommended',
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               left: 15,
               right: 115,
               top: 15,
@@ -33,16 +38,16 @@ class HomeScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(
                           10,
                         ),
-                        boxShadow: [
+                        boxShadow: const <BoxShadow>[
                           BoxShadow(
                             color: Colors.black12,
-                            blurRadius: 2,
-                            spreadRadius: 1,
+                            blurRadius: 1,
+                            spreadRadius: 2,
                           ),
                         ],
                       ),
                       child: TextFormField(
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           prefix: Icon(
                             Icons.search,
                             color: Color(
@@ -65,10 +70,10 @@ class HomeScreen extends StatelessWidget {
                           0.05,
                         ),
                         borderRadius: BorderRadius.circular(
-                          10,
+                          20,
                         ),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Icon(
                           Icons.notifications,
                           color: Color(
@@ -78,6 +83,35 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  height: 150,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    color: const Color(
+                      0xFFFF0DD,
+                    ),
+                    borderRadius: BorderRadius.circular(
+                      20,
+                    ),
+                  ),
+                  child: Image.asset(
+                    'assets/images/freed.png',
+                  ),
+                ),
+                SizedBox(
+                  height: 50,
+                  child: ListView.builder(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.horizontal,
+                    itemCount: tabs.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return const FittedBox();
+                    },
+                  ),
                 ),
               ],
             ),
