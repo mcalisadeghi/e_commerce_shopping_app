@@ -151,13 +151,16 @@ class HomeScreen extends StatelessWidget {
                 ),
                 Container(
                   color: Colors.red,
-                  height: 200,
+                  height: 300,
                   child: ListView.builder(
                     itemCount: imageList.length,
                     scrollDirection: Axis.horizontal,
                     shrinkWrap: true,
                     itemBuilder: (BuildContext context, int index) {
                       return Container(
+                        margin: const EdgeInsets.only(
+                          right: 15,
+                        ),
                         color: Colors.red,
                         height: 200,
                         child: ListView.builder(
@@ -166,9 +169,12 @@ class HomeScreen extends StatelessWidget {
                           shrinkWrap: true,
                           itemBuilder: (BuildContext context, int index) {
                             return Container(
+                              margin: const EdgeInsets.only(
+                                right: 15,
+                              ),
                               child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   SizedBox(
                                     height: 200,
@@ -178,7 +184,7 @@ class HomeScreen extends StatelessWidget {
                                           onTap: () {},
                                           child: ClipRRect(
                                             borderRadius: BorderRadius.circular(
-                                              20,
+                                              10,
                                             ),
                                             child: Image.asset(
                                               imageList[index],
@@ -188,11 +194,39 @@ class HomeScreen extends StatelessWidget {
                                         Positioned(
                                           right: 10,
                                           top: 10,
-                                          child: Container(),
+                                          child: Container(
+                                            height: 30,
+                                            width: 30,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                              borderRadius:
+                                                  BorderRadius.circular(
+                                                20,
+                                              ),
+                                            ),
+                                            child: const Center(
+                                              child: Icon(
+                                                Icons.favorite,
+                                                color: Color(
+                                                  0xFFDB3022,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
                                         ),
                                       ],
                                     ),
                                   ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    productTitles[index],
+                                    style: const TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
                                 ],
                               ),
                             );
