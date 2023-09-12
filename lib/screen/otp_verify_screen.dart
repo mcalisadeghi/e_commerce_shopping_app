@@ -17,8 +17,7 @@ class _OTPVerifyScreenState extends State<OTPVerifyScreen> {
     );
   }
 
-  TextEditingController textEditingController =
-      new TextEditingController(text: "");
+  TextEditingController textEditingController = TextEditingController(text: "");
 
   @override
   Widget build(BuildContext context) {
