@@ -99,6 +99,42 @@ class ProductScreen extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
+                const Text(
+                  'Coll windy weather is on its way.',
+                  style: TextStyle(
+                    color: Colors.black54,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 16,
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      height: 60,
+                      width: 60,
+                      decoration: BoxDecoration(
+                        color: const Color(
+                          0x1F989797,
+                        ),
+                        borderRadius: BorderRadius.circular(
+                          30,
+                        ),
+                      ),
+                      child: const Center(
+                        child: Icon(
+                          Icons.shopping_cart,
+                          color: Color(
+                            0xFFDB3022,
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ],
             ),
           ),
