@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screen/product_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -184,7 +185,13 @@ class HomeScreen extends StatelessWidget {
                                     child: Stack(
                                       children: <Widget>[
                                         InkWell(
-                                          onTap: () {},
+                                          onTap: () => Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  ProductScreen(),
+                                            ),
+                                          ),
                                           child: ClipRRect(
                                             borderRadius: BorderRadius.circular(
                                               10,
@@ -318,7 +325,12 @@ class HomeScreen extends StatelessWidget {
                               child: Stack(
                                 children: <Widget>[
                                   InkWell(
-                                    onTap: () {},
+                                    onTap: () => Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => ProductScreen(),
+                                      ),
+                                    ),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(
                                         10,
