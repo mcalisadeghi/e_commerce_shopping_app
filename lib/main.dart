@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: OnboardingScreen(), //SplashScreen(),
+      // this project its not copmleted.
     );
   }
 }

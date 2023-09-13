@@ -13,6 +13,24 @@ class ContainerButtonModel extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      height: 60,
+      width: containerwidth,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(
+          20,
+        ),
+      ),
+      child: Center(
+        child: Text(
+          itext,
+          style: const TextStyle(
+            color: Colors.white70,
+            fontWeight: FontWeight.bold,
+            fontSize: 18,
+          ),
+        ),
+      ),
+    );
   }
 }
